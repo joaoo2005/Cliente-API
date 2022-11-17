@@ -1,20 +1,20 @@
 package com.example.demo.dto;
 
 public class clienteDTO {
-    private String endereco;
+    private String enderecos;
 
     public clienteDTO() {
     }
 
-    public clienteDTO(String endereco) {
-        this.endereco = endereco;
+    public clienteDTO(String enderecos) {
+        this.enderecos = enderecos;
     }
 
     public String getEndereco() {
-        return endereco;
+        return enderecos;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setEndereco(String enderecos) {
+        this.enderecos = enderecos;
     }
 }

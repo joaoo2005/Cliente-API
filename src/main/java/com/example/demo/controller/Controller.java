@@ -20,7 +20,6 @@ public class Controller {
 
     @PostMapping
     public Cliente creat(@RequestBody @Valid Cliente cliente){
-
         Cliente clienteSaved = repository.save(cliente);
         return clienteSaved;
     }
