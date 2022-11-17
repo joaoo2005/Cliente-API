@@ -39,6 +39,10 @@ public class Cliente {
         return rua;
     }
 
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
+
     public String getProfisao() {
         return profisao;
     }
