@@ -11,13 +11,14 @@ public class Cliente {
     private Long id;
     @NotNull(message = "O nome é obrigatorio!")
     private String nomeCompleto;
-    private String profisao;
+    private String profissao;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Endereco> enderecos;
 
-    public Cliente(String nomeCompleto, String endereco, List<Endereco> enderecos , String profisao) {
+    public Cliente(String nomeCompleto, String profissao, List<Endereco> enderecos) {
         this.nomeCompleto = nomeCompleto;
         this.enderecos = enderecos;
+        this.profissao = profissao;
     }
 
     public Cliente() {
@@ -35,19 +36,19 @@ public class Cliente {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public List<Endereco> getEnderecos(List<Endereco> rua) {
-        return rua;
+    public String getProfissao() {
+        return profissao;
     }
 
-    public void setEnderecos(List<Endereco> enderecos) {
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
+
+    public List<Endereco> getEnderecos(List<Endereco> enderecos) {
+        return enderecos;
+    }
+
+    public void setEnderecos() {
         this.enderecos = enderecos;
-    }
-
-    public String getProfisao() {
-        return profisao;
-    }
-
-    public void setProfisao(String profisao) {
-        this.profisao = profisao;
     }
 }
