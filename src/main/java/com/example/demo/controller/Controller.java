@@ -19,6 +19,7 @@ public class Controller {
     Repository repository;
 
     @PostMapping
+    @ResponseBody
     public Cliente creat(@RequestBody @Valid Cliente cliente){
         Cliente clienteSaved = repository.save(cliente);
         return clienteSaved;
@@ -53,7 +54,7 @@ public class Controller {
     }
 
     @PutMapping("/atualize/{id}")
-    public String updateClineteById(@RequestBody clienteDTO clienteDTO, @PathVariable Long id){
+    public String updateClineteById(@RequestBody Cliente clienteDTO, @PathVariable Long id){
         Optional<Cliente> velhoCliente = repository.findById(id);
         if(velhoCliente.isPresent()){
             Cliente cliente = velhoCliente.get();

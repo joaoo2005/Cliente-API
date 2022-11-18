@@ -36,16 +36,16 @@ public class Cliente {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public String getProfisao() {
+    public String getProfissao() {
         return profissao;
     }
 
-    public void setProfisao(String profissao) {
+    public void setProfissao(String profissao) {
         this.profissao = profissao;
     }
 
-    public List<Endereco> getEnderecos(List<Endereco> rua) {
-        return rua;
+    public List<Endereco> getEnderecos(List<Endereco> enderecos) {
+        return enderecos;
     }
 
     public void setEnderecos() {

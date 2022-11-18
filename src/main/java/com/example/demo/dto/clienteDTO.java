@@ -14,7 +14,7 @@ public class clienteDTO {
         return enderecos;
     }
 
-    public void setEndereco(String enderecos) {
-        this.enderecos = enderecos;
+    public void setEndereco(String endereco) {
+        this.enderecos = endereco;
     }
 }
